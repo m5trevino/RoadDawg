@@ -1,21 +1,16 @@
-# 🐶 ROAD DAWG
-### The Ride-or-Die Version Control System.
+# 🐶 ROAD DAWG v3.0
+### The Cyberpunk Version Control System.
 
-**"Hack the Planet."**
+**"We see everything."**
 
 ## 💀 Features
-*   **Sanitizer:** Automatically strips nested backticks to prevent terminal breakage.
-*   **Batch Loader:** Select multiple files -> Copy one installer script.
-*   **Glass HUD:** Bottom-right controls that don't block your view.
-*   **Exec Mode:** Optional auto-run commands appended to your paste.
+*   **Sanitizer:** Automatically strips nested backticks.
+*   **Batch Loader:** Multi-file installer generation.
+*   **Glass HUD:** Bottom-right controls.
+*   **Exec Mode:** Auto-run capability.
 
 ## 🚀 Deployment
-### Server
 ```bash
 ./install.sh
+./run_road_dawg.sh
 ```
-
-### Client
-1. Install Tampermonkey.
-2. Load `client/road_dawg_scout.js`.
-3. Set your own Dog Image in the code!
