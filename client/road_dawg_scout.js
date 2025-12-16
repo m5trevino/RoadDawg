@@ -2,7 +2,7 @@
 // @name         ROAD DAWG v2.0 | The Scout
 // @namespace    http://tampermonkey.net/
 // @version      2.0
-// @description  Hydration, Exfiltration, Bottom-Right HUD
+// @description  Hydration, Exfiltration, Bottom-Right HUD & Sanitizer
 // @author       The Architect
 // @match        *://aistudio.google.com/*
 // @grant        GM_xmlhttpRequest
@@ -21,7 +21,7 @@
 
     // 1. THE TRIGGER (FOLLOW ME) - BOTTOM RIGHT
     const trigger = document.createElement("div");
-    trigger.innerHTML = "🐺"; // Placeholder Dog
+    trigger.innerHTML = "🐺"; 
     trigger.title = "Road Dawg: Hydrate Chat";
     trigger.style.cssText = `
         position: fixed; bottom: 20px; right: 20px; z-index: 99999;
@@ -75,6 +75,7 @@
         let lines = raw.split('\n');
         if (lines.length > 0 && lines[0].trim().startsWith("```")) lines.shift();
         if (lines.length > 0 && lines[lines.length-1].trim().startsWith("```")) lines.pop();
+        // Replace internal backticks to prevent breakage
         return lines.join('\n').replace(/```/g, "'''"); 
     }
 
